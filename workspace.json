@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "microfrontend-federation": "apps/microfrontend-federation",
+    "microfrontend-federation-e2e": "apps/microfrontend-federation-e2e"
+  }
+}
