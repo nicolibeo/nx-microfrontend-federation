@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "microfrontend-federation": "apps/microfrontend-federation",
-    "microfrontend-federation-e2e": "apps/microfrontend-federation-e2e"
+    "child-app-1": "apps/child-app-1",
+    "shell": "apps/shell"
   }
 }

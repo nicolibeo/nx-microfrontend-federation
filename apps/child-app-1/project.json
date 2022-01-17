@@ -1,0 +1,45 @@
+{
+  "root": "apps/child-app-1",
+  "sourceRoot": "apps/child-app-1/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/child-app-1",
+        "index": "apps/child-app-1/src/index.html",
+        "baseHref": "/",
+        "main": "apps/child-app-1/src/main.tsx",
+        "polyfills": "apps/child-app-1/src/polyfills.ts",
+        "tsConfig": "apps/child-app-1/tsconfig.app.json",
+        "assets": [
+          "apps/child-app-1/src/favicon.ico",
+          "apps/child-app-1/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/child-app-1/src/environments/environment.ts",
+              "with": "apps/child-app-1/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    }
+  },
+  "tags": []
+}

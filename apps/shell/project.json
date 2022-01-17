@@ -1,0 +1,29 @@
+{
+  "root": "apps/shell",
+  "sourceRoot": "apps/shell/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["dist"],
+      "options": {
+        "maxWorkers": 1,
+        "memoryLimit": 10281,
+        "command": "node ../../node_modules/.bin/react-app-rewired build",
+        "cwd": "apps/shell"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "maxWorkers": 1,
+        "tsConfig": "apps/shell/tsconfig.json",
+        "memoryLimit": 10281,
+        "command": "node ../../node_modules/.bin/react-app-rewired start",
+        "cwd": "apps/shell"
+      }
+    }
+  },
+  "tags": []
+}
